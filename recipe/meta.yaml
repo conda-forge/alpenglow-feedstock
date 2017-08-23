@@ -1,5 +1,5 @@
-{% set version = "0.1.5" %}
-{% set sha256 = "17f94a57cde903490a138c3be550f908ff579c7828c33b0d7d89cdaf77b0b253" %}
+{% set version = "0.1.6" %}
+{% set sha256 = "4afb23564230085f8c67a12d7a3dd0776c860a46a0f8685d177aac691491c494" %}
 
 package:
   name: alpenglow
