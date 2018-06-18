@@ -16,10 +16,14 @@ build:
 
 requirements:
   build:
+    - {{ compiler('cxx') }}
+  host:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
     - python
     - sip
     - setuptools
-    - toolchain
     - eigen
     - numpy
 
