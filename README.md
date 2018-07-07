@@ -14,14 +14,16 @@ Summary: Open Source Recommender Framework with Time-aware Learning and Evaluati
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/alpenglow-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/alpenglow-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/alpenglow-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/alpenglow-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/alpenglow-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/alpenglow-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/alpenglow-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/alpenglow-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/alpenglow-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/alpenglow-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/alpenglow-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/alpenglow-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/alpenglow/badges/version.svg)](https://anaconda.org/conda-forge/alpenglow)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/alpenglow/badges/downloads.svg)](https://anaconda.org/conda-forge/alpenglow)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-alpenglow-green.svg)](https://anaconda.org/conda-forge/alpenglow) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/alpenglow.svg)](https://anaconda.org/conda-forge/alpenglow) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/alpenglow.svg)](https://anaconda.org/conda-forge/alpenglow) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/alpenglow.svg)](https://anaconda.org/conda-forge/alpenglow) |
 
 Installing alpenglow
 ====================
