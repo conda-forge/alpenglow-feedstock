@@ -1,5 +1,5 @@
-{% set version = "1.0.0" %}
-{% set sha256 = "99a1209737e8e6e51a9d3a646935bcbf2418d8457c250f9c206a256dddc293ef" %}
+{% set version = "1.0.1" %}
+{% set sha256 = "b4534cacd8bee6b3d5e1b3d0a544bb8498cf1972118eeeaf7f90b802f138c595" %}
 # curl -sL https://github.com/rpalovics/Alpenglow/archive/vX.X.X.tar.gz | openssl sha256
 
 package:
@@ -12,7 +12,7 @@ source:
 
 build:
   skip: True  # [py<35]
-  number: 1
+  number: 0
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
