@@ -12,7 +12,7 @@ source:
 
 build:
   skip: True  # [py<35]
-  number: 0
+  number: 1
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
@@ -22,7 +22,7 @@ requirements:
     - {{ compiler('fortran') }}
   host:
     - python
-    - sip
+    - sip >=4.19.20,<5
     - setuptools
     - eigen
     - numpy
@@ -30,7 +30,7 @@ requirements:
     - python
     - pandas
     - numpy
-    - sip
+    - sip >=4.19.20,<5
 
 test:
   imports:
