@@ -1,5 +1,7 @@
 {% set version = "1.0.1" %}
 {% set sha256 = "b4534cacd8bee6b3d5e1b3d0a544bb8498cf1972118eeeaf7f90b802f138c595" %}
+{% set sip_version = "4.19.20" %}
+{% set sip_sha256 = "04cc2f87ac97e8718d8e1ef036e3ec26050ab44c21f9277618d5b67432fcbfd6" %}
 # curl -sL https://github.com/rpalovics/Alpenglow/archive/vX.X.X.tar.gz | openssl sha256
 
 package:
@@ -7,30 +9,38 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/rpalovics/Alpenglow/archive/v{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  - url:  https://www.riverbankcomputing.com/static/Downloads/sip/{{ sip_version }}/sip-{{ sip_version }}.tar.gz
+    sha256: {{ sip_sha256 }}
+    folder: sip
+    patches:
+      - 0001-Do-not-override-CC-CXX-LINK-in-sipgen-Makefile.patch
+  # - url: https://github.com/rpalovics/Alpenglow/archive/v{{ version }}.tar.gz
+  #   sha256: {{ sha256 }}
+    # folder: alpenglow
+  - path: /home/kd/sztaki/workspace/alpenglow-38/Alpenglow
+    folder: alpenglow
 
 build:
   skip: True  # [py<35]
-  number: 1
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  number: 3
 
 requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - {{ compiler('fortran') }}
+    - make  # [not win]
   host:
     - python
     - sip >=4.19.20,<5
     - setuptools
     - eigen
     - numpy
+    - pip
   run:
     - python
     - pandas
     - numpy
-    - sip >=4.19.20,<5
 
 test:
   imports:
@@ -47,7 +57,9 @@ about:
   home: https://github.com/rpalovics/Alpenglow
   summary: Open Source Recommender Framework with Time-aware Learning and Evaluation
   license: Apache-2.0
-  license_file: LICENSE
+  license_file:
+    - alpenglow/LICENSE
+    - sip/LICENSE
   doc_url: http://alpenglow.readthedocs.io/
 
 extra:

@@ -60,6 +60,7 @@ export UPLOAD_PACKAGES="${UPLOAD_PACKAGES:-True}"
 docker run ${DOCKER_RUN_ARGS} \
            -v "${RECIPE_ROOT}":/home/conda/recipe_root:ro,z \
            -v "${FEEDSTOCK_ROOT}":/home/conda/feedstock_root:rw,z \
+           -v /home/kd/sztaki/workspace/alpenglow-38/Alpenglow:/home/kd/sztaki/workspace/alpenglow-38/Alpenglow:ro,z \
            -e CONFIG \
            -e BINSTAR_TOKEN \
            -e HOST_USER_ID \
