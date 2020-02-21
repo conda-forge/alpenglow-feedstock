@@ -30,7 +30,6 @@ requirements:
     - make  # [not win]
   host:
     - python
-    - sip >=4.19.20,<5
     - setuptools
     - eigen
     - numpy
