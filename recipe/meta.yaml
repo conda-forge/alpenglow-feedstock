@@ -1,5 +1,5 @@
-{% set version = "1.0.2" %}
-{% set sha256 = "aae90af6b4730824ba15a3e8a868dff8e09f3db3d89b9b23ac2c70cbe1230246" %}
+{% set version = "1.0.3" %}
+{% set sha256 = "aeb9390a4afd2bc5307c31262de65d27dca8fb5b7b90e02761da618290411e4c" %}
 {% set sip_version = "4.19.20" %}
 {% set sip_sha256 = "04cc2f87ac97e8718d8e1ef036e3ec26050ab44c21f9277618d5b67432fcbfd6" %}
 # curl -sL https://github.com/rpalovics/Alpenglow/archive/vX.X.X.tar.gz | openssl sha256
@@ -9,7 +9,7 @@ package:
   version: {{ version }}
 
 source:
-  - url:  https://www.riverbankcomputing.com/static/Downloads/sip/{{ sip_version }}/sip-{{ sip_version }}.tar.gz
+  - url: https://www.riverbankcomputing.com/static/Downloads/sip/{{ sip_version }}/sip-{{ sip_version }}.tar.gz
     sha256: {{ sip_sha256 }}
     folder: sip
     patches:
@@ -19,7 +19,7 @@ source:
     folder: alpenglow
 
 build:
-  skip: True  # [py<35]
+  skip: true  # [py<35]
   number: 0
 
 requirements:
