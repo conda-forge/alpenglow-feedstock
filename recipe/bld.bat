@@ -14,7 +14,7 @@ if errorlevel 1 exit 1
 nmake install
 if errorlevel 1 exit 1
 
-%PYTHON% configure.py --sysroot=%PREFIX% --no-tools
+%PYTHON% configure.py --sysroot=%PREFIX% --sip-module alpenglow.sip --no-tools
 if errorlevel 1 exit 1
 
 nmake
