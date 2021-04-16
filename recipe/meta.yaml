@@ -14,8 +14,10 @@ source:
     folder: sip
     patches:
       - 0001-Do-not-override-CC-CXX-LINK-in-sipgen-Makefile.patch
-  - url: https://github.com/rpalovics/Alpenglow/archive/v{{ version }}.tar.gz
-    sha256: {{ sha256 }}
+  # - url: https://github.com/rpalovics/Alpenglow/archive/v{{ version }}.tar.gz
+  #   sha256: {{ sha256 }}
+  #   folder: alpenglow
+  - git_url: https://github.com/rpalovics/Alpenglow.git
     folder: alpenglow
 
 build:
