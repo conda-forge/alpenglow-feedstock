@@ -1,5 +1,5 @@
-{% set version = "1.0.6" %}
-{% set sha256 = "f3e6dc41e4aeeb61fda59e3a0a0afac47482d265c4e151bf6e8ad0c52ebf6cde" %}
+{% set version = "1.0.7" %}
+{% set sha256 = "f86f7291298016db8fe46b9ea6d59e8cad84022c4d49ce811cafc1487cc6408e" %}
 {% set sip_version = "4.19.25" %}
 {% set sip_sha256 = "b39d93e937647807bac23579edbff25fe46d16213f708370072574ab1f1b4211" %}
 # curl -sL https://github.com/rpalovics/Alpenglow/archive/vX.X.X.tar.gz | openssl sha256
