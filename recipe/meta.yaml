@@ -9,7 +9,7 @@ package:
   version: {{ version }}
 
 source:
-  - url:  https://www.riverbankcomputing.com/static/Downloads/sip/{{ sip_version }}/sip-{{ sip_version }}.tar.gz
+  - url: https://www.riverbankcomputing.com/static/Downloads/sip/{{ sip_version }}/sip-{{ sip_version }}.tar.gz
     sha256: {{ sip_sha256 }}
     folder: sip
     patches:
@@ -19,7 +19,7 @@ source:
     folder: alpenglow
 
 build:
-  skip: True  # [py<35]
+  skip: true  # [py<35]
   number: 0
 
 requirements:
